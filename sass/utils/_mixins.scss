@@ -1,0 +1,31 @@
+/* mixins to change colors */
+
+@mixin color($color) {
+  @if (lightness($color) > 70) {
+    color: darken($color, 20);
+  } @else {
+    color: lighten($color, 20);
+  }
+}
+
+@mixin background($color) {
+  @if (lightness($color) > 70) {
+    background-color: darken($color, 5);
+  } @else {
+    background-color: lighten($color, 5);
+  }
+}
+
+/* mixins for responsive design */
+
+@mixin tab {
+  @media screen and (min-width: map-get($breakpoints, tab)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}

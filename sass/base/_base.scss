@@ -1,0 +1,29 @@
+/* basic configuration */
+
+body {
+  margin: auto;
+  @include background($color-white);
+}
+
+.container {
+  display: flex;
+  font-family: "Roboto", sans-serif;
+  flex-direction: column;
+}
+
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  object-fit: cover;
+}

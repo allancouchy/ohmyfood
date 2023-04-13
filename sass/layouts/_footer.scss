@@ -1,0 +1,24 @@
+.footer {
+  color: $color-white;
+  background-color: $color-black;
+  padding: 20px;
+  margin-top: 20px;
+
+  &__links {
+    padding: 0px;
+
+    &__item {
+      list-style-type: none;
+      margin: 10px 0px;
+    }
+
+    &__icon {
+      width: 40px;
+    }
+
+    &__element {
+      color: $color-white;
+      text-decoration: none;
+    }
+  }
+}
