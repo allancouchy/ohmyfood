@@ -47,7 +47,7 @@
     @include background($color-white);
 
     &:hover {
-      background-color: lighten($color-primary, 30);
+      background-color: lighten($color-primary, 35);
       
       > .ope__element__icon--scd {
         color: $color-primary;
