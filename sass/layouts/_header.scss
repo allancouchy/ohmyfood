@@ -7,6 +7,10 @@
   box-shadow: 0px 2px 4px #00000026;
   align-items: center;
 
+  &--home {
+    justify-content: center;
+  }
+
   &__home {
     width: 5%;
     display: flex;
