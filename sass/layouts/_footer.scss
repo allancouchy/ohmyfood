@@ -1,11 +1,28 @@
 .footer {
+  display: flex;
   color: $color-white;
   background-color: $color-black;
+  flex-direction: column;
   padding: 20px;
-  margin-top: 20px;
+
+  @include desktop {
+    height: 114px;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
 
   &__links {
+    display: flex;
+    flex-direction: column;
     padding: 0px;
+
+    @include desktop {
+      width: 70%;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0px;
+    }
 
     &__item {
       list-style-type: none;

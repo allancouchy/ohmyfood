@@ -1,0 +1,148 @@
+.cover {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  &__img {
+    width: 100%;
+  }
+
+  &__content {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    padding: 0px 20px;
+    @include background($color-white);
+
+    @include tab {
+      justify-content: center;
+    }
+
+    @include desktop {
+      width: 80%;
+    }
+  }
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+  margin-bottom: 30px;
+
+  @include tab {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  @include desktop {
+    width: 80%;
+  }
+
+  &__bloc {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0px;
+
+    @include tab {
+      width: 32%;
+    }
+  }
+
+  &__dish {
+    height: 69px;
+    display: flex;
+    color: $color-black;
+    text-decoration: none;
+    border-radius: 15px;
+    background-color: $color-white;
+    box-shadow: 0px 3px 15px #0000001a;
+    align-items: center;
+    margin: 6px 0px;
+
+    &__desc {
+      width: 90%;
+
+      @include tab {
+        width: 80%;
+      }
+
+      &:hover {
+        width: 60%;
+        transition: all 400ms ease-in-out;
+
+        + .menu__check {
+          width: 40%;
+          transition: all 400ms ease-in-out;
+
+          > .menu__check__content {
+            width: 100%;
+
+            > .menu__check__element {
+              transform: rotate(2turn);
+              transition: transform 400ms ease-in-out 200ms;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    &__name {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-left: 15px;
+      margin: 0px;
+    }
+
+    &__compo {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding-left: 15px;
+      margin: 0px;
+    }
+
+    &__price {
+      margin: 10px;
+      justify-self: flex-start;
+    }
+  }
+
+  &__check {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+
+    @include tab {
+      width: 20%;
+    }
+
+    &__content {
+      width: 0%;
+      height: 100%;
+      display: flex;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      background-color: $color-tertiary;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__element {
+      font-size: 20px;
+      color: $color-white;
+    }
+  }
+}

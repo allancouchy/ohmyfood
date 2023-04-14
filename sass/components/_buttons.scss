@@ -5,11 +5,17 @@
   color: $color-white;
   text-decoration: none;
   border-radius: 25px;
+  border-style: none;
   background: linear-gradient(193.33deg, #9356dc -11.44%, #ff79da 123.93%);
   box-shadow: 0px 4px 10px #00000040;
   justify-content: center;
   align-items: center;
-  margin: 10px 0px;
+  margin: 15px 0px 30px 0px;
+
+  &:hover {
+    background: linear-gradient(0deg, #ffffff26, #ffffff26), linear-gradient(200.64deg, #9356DC -5.2%, #FF79DA 110.74%);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  }
 }
 
 /* like button */
@@ -25,7 +31,7 @@
   }
 
   &__element {
-    font-size: 30px;
+    font-size: 25px;
     transform-origin: bottom;
 
     &__unlike {

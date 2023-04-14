@@ -1,4 +1,27 @@
 .hdg {
   font-size: 24px;
   font-weight: 700;
+
+  @include desktop {
+    width: 80%;
+    align-self: center;
+  }
+
+  &--loc {
+    text-align: center;
+  }
+
+  &--rest {
+    font-size: 28px;
+    font-family: "Shrikhand", cursive;
+    margin: 0px 20px 0px 0px;
+  }
+
+  &--menu {
+    width: 40px;
+    font-size: 16px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 3px solid $color-tertiary;
+  }
 }
